@@ -39,7 +39,6 @@
   }
 }
 
-
 .btn-hero-chat{
   position:absolute;
   z-index:9;
@@ -58,4 +57,16 @@
     color:#fff;
     background-color: $nero;
   }
+}
+
+.hero-bottom-arch{
+  position:absolute;
+  bottom:0;
+  left:0;
+  background-image:url(images/hero-bottom-arch.png);
+  background-repeat:no-repeat;
+  background-size:contain;
+  height:118px;
+  width:100%;
+  z-index:3;
 }
