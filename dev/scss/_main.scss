@@ -7,3 +7,77 @@ body{
 a{
   transition: all .3s ease;
 }
+
+.btn-main{
+  display:inline-block;
+  font-family: $font-alt;
+  font-weight: $font-weight-medium;
+  color: $nero;
+  background-color: $turbo;
+  padding:5px 30px;
+  /*border: 2px solid #dcd7d4;*/
+  position:relative;
+
+  &::before{
+    content:"";
+    position:absolute;
+    top:-6%;
+    left:-3%;
+    height:114%;
+    width:106%;
+    z-index:-1;
+    background-color:#fff;
+    background-image:repeating-linear-gradient(90deg, #dcd7d4, #8c888e 25%, #dcd7d4 50%);
+  }
+
+  &:hover,
+  &:focus{
+    background-color: $nero;
+    color:#fff;
+    text-decoration:none;
+  }
+}
+
+.btn-main + .btn-main{
+  margin-left:25px;
+
+  @include media-breakpoint-only(xs){
+    display:block;
+    margin-left:0;
+    margin-top:25px;
+  }
+}
+
+.dark-overlay{
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  background-color:rgba(0,0,0,.5);
+  z-index:1;
+}
+
+h1{
+  font-family: $font-alt;
+  font-size:60px;
+  font-weight: $font-weight-medium;
+
+  @include media-breakpoint-only(xs){
+    font-size:48px;
+  }
+}
+h2{
+  font-family: $font-alt;
+  font-size:36px;
+  font-weight: $font-weight-medium;
+}
+h3{
+  font-family: $font-alt;
+  font-size:30px;
+  font-weight: $font-weight-medium;
+}
+
+p{
+  line-height:1.2em;
+}

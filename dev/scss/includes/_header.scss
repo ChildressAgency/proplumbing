@@ -2,6 +2,10 @@
 * top header section styles
 **********************************/
 
+#header{
+  position:relative;
+  z-index:999;
+}
 #masthead{
   background: rgba(246,197,38,1);
   background: -moz-linear-gradient(top, rgba(246,197,38,1) 0%, rgba(247,146,23,1) 100%);
