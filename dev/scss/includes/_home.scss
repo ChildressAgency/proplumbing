@@ -56,3 +56,144 @@
     transform:translateY(0px);
   }
 }
+
+#leaky-pipe{
+  background-image:url(images/textured-bg.jpg);
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:cover;
+  overflow:hidden;
+
+  .container-fluid{
+    max-width:1300px;
+  }
+
+  article{
+    margin-top: 175px;
+    max-width:485px;
+    margin-left:auto;
+    margin-right:auto;
+    color: $nero;
+    position:relative;
+    z-index:1;
+
+    h2{
+      margin-bottom:25px;
+    }
+
+    ul{
+      list-style:none;
+      padding-left:0;
+    }
+
+    @include media-breakpoint-down(sm){
+      margin-top:0;
+      padding-top:40px;
+      padding-bottom:120px;
+    }
+  }
+}
+
+.pipe-valve{
+  position:relative;
+  text-align:center;
+
+  .pipe{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .valve{
+    position:absolute;
+    bottom:205px;
+    left:50%;
+    transform:translateX(-50%);
+    animation: spin 4000ms linear 0s infinite;
+  }
+}
+
+@keyframes spin{
+  100%{
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+#testimonials-financing{
+  .row{
+    width:100%;
+  }
+
+  .testimonials{
+    background-color: $nero;
+    padding-top:40px;
+    padding-bottom:40px;
+    text-align:center;
+    color:#fff;
+  }
+
+  .financing{
+    background-image:url(images/signing-clipboard.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+  }
+
+  .financing-content{
+    max-width:420px;
+    color:#fff;
+    position:relative;
+    z-index:3;
+    text-align:center;
+    padding-top:40px;
+    padding-bottom:40px;
+
+    h2{
+      color: $fruit-salad;
+      margin-bottom:20px;
+    }
+  }
+}
+
+#testimonials-carousel{
+  max-width: 420px;
+
+  cite{
+    font-style:normal;
+    font-weight: $font-weight-bold;
+  }
+
+  .carousel-indicators{
+    position:relative;
+    margin-top:25px;
+
+    li{
+      height:23px;
+      width:23px;
+      border-radius:50%;
+      background-color:#e6e6e6;
+      opacity:1;
+      transition:all .2s ease;
+
+      &.active,
+      &:hover{
+        background-color: $turbo;
+      }
+
+      & + li{
+        margin-left:10px;
+      }
+    }
+  }
+
+  .leave-review{
+    font-style:italic;
+    display:block;
+    margin-top:25px;
+    color:#fff;
+
+    &:hover,
+    &:focus{
+      color:#fff;
+    }
+  }
+}

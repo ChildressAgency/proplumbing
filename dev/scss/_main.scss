@@ -36,6 +36,16 @@ a{
     color:#fff;
     text-decoration:none;
   }
+
+  &.btn-alt{
+    background-color: $nero;
+    color:#fff;
+  }
+  &.btn-alt:hover,
+  &.btn-alt:focus{
+    background-color: $turbo;
+    color: $nero;
+  }
 }
 
 .btn-main + .btn-main{
