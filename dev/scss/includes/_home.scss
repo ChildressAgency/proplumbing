@@ -1,0 +1,58 @@
+/************************************
+* home page styles
+************************************/
+
+#any-situation{
+  background-color: $nero;
+  padding-top:40px;
+  padding-bottom:40px;
+  overflow:hidden;
+
+  .container-fluid{
+    max-width:1300px;
+    position:relative;
+    z-index:1;
+  }
+
+  h2{
+    color: $turbo;
+    margin-bottom:25px;
+  }
+
+  p{
+    color: #fff;
+  }
+  .btn-main{
+    margin-top:25px;
+  }
+}
+
+.drive-in-right{
+  margin-left:120%;
+
+  &.animation-go{
+    animation: drive-in-right 3000ms linear 0s 1 normal forwards, 
+      run-truck 150ms linear 0s 30 normal;
+  }
+}
+
+@keyframes drive-in-right{
+  0%{
+    margin-left:120%;
+  }
+  100%{
+    margin-left:0;
+  }
+}
+
+@keyframes run-truck{
+  0%{
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(-4px);
+  }
+  100%{
+    transform:translateY(0px);
+  }
+}
