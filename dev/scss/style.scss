@@ -1,5 +1,5 @@
 /*!
-  Theme Name: Professional Plumbing
+  Theme Name: Professional Plumbing Solutions Inc
   Theme Author: The Childress Agency
   Theme Autor URI: https://childressagency.com
   Version: 1.0
@@ -16,14 +16,15 @@
 *******************************/
 @import "includes/bootstrap";
 
-/*******************************
-* scss partial files
-*******************************/
-
-
-
 /******************************
 * main scss file with gobal
 * styles
 ******************************/
 @import "main";
+
+/*******************************
+* scss partial files
+* note these will override main
+*******************************/
+@import "includes/header";
+
