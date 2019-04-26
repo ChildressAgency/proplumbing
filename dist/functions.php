@@ -111,6 +111,66 @@ function proplumbing_setup(){
 
 require_once dirname(__FILE__) . '/includes/class-wp-bootstrap-navwalker.php';
 
+function proplumbing_header_fallback_menu(){ ?>
+  <div id="header-navbar" class="collapse navbar-collapse justify-content-md-center">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown<?php if(is_page('services') || is_singular('service')){ echo ' active'; } ?>">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><?php echo esc_html__('Services', 'proplumbing'); ?></a>
+        <ul class="dropdown-menu" role="menu">
+          <li class="menu-item nav-item<?php if(is_page('services')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('services')); ?>" class="dropdown-item"><?php echo esc_html__('All Services', 'proplumbing'); ?></a>
+          </li>
+          <li class="menu-item nav-item<?php if(is_single('sewer-septic')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('sewer-septic')); ?>" class="dropdown-item"><?php echo esc_html__('Sewer & Septic', 'proplumbing'); ?></a>
+          </li>
+          <li class="menu-item nav-item<?php if(is_single('well-pumps-filtration')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('well-pumps-filtration')); ?>" class="dropdown-item"><?php echo esc_html__('Well Pumps & Filtration', 'proplumbing'); ?></a>
+          </li>
+          <li class="menu-item nav-item<?php if(is_single('drain-cleaning')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('drain-cleaning')); ?>" class="dropdown-item"><?php echo esc_html__('Drain Cleaning', 'proplumbing'); ?></a>
+          </li>
+          <li class="menu-item nav-item<?php if(is_single('camera-inspections')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('camera-inspections')); ?>" class="dropdown-item"><?php echo esc_html__('Camera Inspections', 'proplumbing'); ?></a>
+          </li>
+          <li class="menu-item nav-item<?php if(is_single('well-pump-systems')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('well-pump-systems')); ?>" class="dropdown-item"><?php echo esc_html__('Well Pump Systems', 'proplumbing'); ?></a>
+          </li>
+          <li class="menu-item nav-item<?php if(is_single('location-services')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('location-services')); ?>" class="dropdown-item"><?php echo esc_html__('Location Services', 'proplumbing'); ?></a>
+          </li>
+          <li class="menu-item nav-item<?php if(is_single('emergency-services')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('emergency-services')); ?>" class="dropdown-item"><?php echo esc_html__('Emergency Services', 'proplumbing'); ?></a>
+          </li>
+          <li class="menu-item nav-item<?php if(is_single('water-heater-services')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('water-heater-services')); ?>" class="dropdown-item"><?php echo esc_html__('Water Heater Services', 'proplumbing'); ?></a>
+          </li>
+          <li class="menu-item nav-item<?php if(is_single('troubleshooting-leaks-and-clogs')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('troubleshooting-leaks-and-clogs')); ?>" class="dropdown-item"><?php echo esc_html__('Troubleshooting Leaks and Clogs', 'proplumbing'); ?></a>
+          </li>
+          <li class="menu-item nav-item<?php if(is_single('water-filtration')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('water-filtration')); ?>" class="dropdown-item"><?php echo esc_html__('Water Filtration', 'proplumbing'); ?></a>
+          </li>
+          <li class="menu-item nav-item<?php if(is_single('root-removal')){ echo ' active'; } ?>">
+            <a href="<?php echo esc_url(home_url('root-removal')); ?>" class="dropdown-item"><?php echo esc_html__('Root Removal', 'proplumbing'); ?></a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item<?php if(is_page('financing')){ echo ' active'; } ?>">
+        <a href="<?php echo esc_url(home_url('financing')); ?>" class="nav-link"><?php echo esc_html__('Financing', 'proplumbing'); ?></a>
+      </li>
+      <li class="nav-item<?php if(is_page('gallery')){ echo ' active'; } ?>">
+        <a href="<?php echo esc_url(home_url('gallery')); ?>" class="nav-link"><?php echo esc_html__('Gallery', 'proplumbing'); ?></a>
+      </li>
+      <li class="nav-item<?php if(is_page('our-team')){ echo ' active'; } ?>">
+        <a href="<?php echo esc_url(home_url('our-team')); ?>" class="nav-link"><?php echo esc_html__('Our Team', 'proplumbing'); ?></a>
+      </li>
+      <li class="nav-item<?php if(is_page('contact-us')){ echo ' active'; } ?>">
+        <a href="<?php echo esc_url(home_url('contact-us')); ?>" class="nav-link"><?php echo esc_html__('Contact Us', 'proplumbing'); ?></a>
+      </li>
+    </ul>
+  </div>
+<?php }
+
 //custom font settings for acf editor
 add_filter('mce_buttons_2', 'proplumbing_wp_buttons');
 function proplumbing_wp_buttons($buttons){
