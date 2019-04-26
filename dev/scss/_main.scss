@@ -91,3 +91,89 @@ h3{
 p{
   line-height:1.2em;
 }
+
+#main{
+  padding-top:40px;
+  padding-bottom:60px;
+}
+.main-content{
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.article-header{
+  text-align:center;
+}
+.article-content{
+  margin-top:40px;
+}
+
+.services-list li{
+  padding-left:15px;
+  padding-right:15px;
+  width:50%;
+  margin-top:40px;
+
+  @include media-breakpoint-up(sm){
+    width:33.3%;
+  }
+  @include media-breakpoint-up(lg){
+    width:25%;
+  }
+}
+.service-link{
+  display:block;
+  max-width:175px;
+  margin-left:auto;
+  margin-right:auto;
+  color: $nero;
+
+  img{
+    border-radius:50%;
+    transition:all .2s ease;
+  }
+  h3{
+    margin-top:20px;
+    font-size:16px;
+    transition:all .2s ease;
+  }
+
+  &:hover{
+    color: $nero;
+    text-decoration:none;
+
+    img{
+      transform:scale(1.1, 1.1);
+    }
+  }
+}
+
+#get-started{
+  @include turbo-gradient;
+
+  position:relative;
+  min-height:615px;
+
+  .eagle{
+    position:absolute;
+    right:0;
+    top:60px;
+  }
+}
+.get-started-container{
+  max-width:620px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:15px;
+  padding-right:15px;
+  text-align:center;
+  position:relative;
+  z-index:5;
+
+  h2{
+    margin-bottom:25px;
+  }
+  .btn-main{
+    margin-top:40px;
+  }
+}
