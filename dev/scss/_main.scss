@@ -58,6 +58,10 @@ a{
   }
 }
 
+input.btn-main{
+  border:2px solid $nero;
+}
+
 .btn-rounded{
   display:inline-block;
   font-family: $font-alt;
@@ -198,8 +202,7 @@ p{
   max-width:620px;
   margin-left:auto;
   margin-right:auto;
-  padding-left:15px;
-  padding-right:15px;
+  padding:40px 15px;
   text-align:center;
   position:relative;
   z-index:5;
@@ -228,7 +231,7 @@ p{
 
   h2{
     margin-bottom:25px;
-    
+
     &>small{
       display:block;
       color: $turbo;
@@ -237,4 +240,13 @@ p{
       text-transform:uppercase;
     }
   }
+}
+
+.contact-form{
+  padding-bottom:140px;
+}
+
+.form-control{
+  border-color: $nero;
+  border-radius: 0;
 }
