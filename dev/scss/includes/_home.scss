@@ -126,7 +126,9 @@
   .testimonials{
     background-color: $nero;
     padding-top:40px;
-    padding-bottom:40px;
+    padding-bottom:100px;
+    padding-left:15px;
+    padding-right:15px;
     text-align:center;
     color:#fff;
   }
@@ -145,11 +147,20 @@
     z-index:3;
     text-align:center;
     padding-top:40px;
-    padding-bottom:40px;
+    padding-bottom:100px;
+    padding-left:15px;
+    padding-right:15px;
 
     h2{
       color: $fruit-salad;
       margin-bottom:20px;
+    }
+
+    @include media-breakpoint-only(sm){
+      padding-bottom:200px;
+    }
+    @include media-breakpoint-only(xs){
+      padding-bottom:240px;
     }
   }
 }
