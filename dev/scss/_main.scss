@@ -106,6 +106,10 @@ p{
 }
 .article-content{
   margin-top:40px;
+
+  .btn-main{
+    margin-top:40px;
+  }
 }
 
 .services-list li{
@@ -175,5 +179,16 @@ p{
   }
   .btn-main{
     margin-top:40px;
+  }
+}
+
+#gallery{
+  background-color:#f2f2f2;
+  padding-top:40px;
+  padding-bottom:60px;
+
+  h2{
+    margin-bottom:25px;
+    text-align:center;
   }
 }
