@@ -270,7 +270,7 @@ function proplumbing_custom_styles(){
 }
 //end custom font settings
 
-function fedcon_esc_svg($svg){
+function proplumbing_esc_svg($svg){
   $kses_defaults = wp_kses_allowed_html('post');
 
   $svg_args = array(
