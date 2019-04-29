@@ -62,21 +62,37 @@
     <div class="header-arch"></div>
   </header>
 
-  <section id="hero" class="hp-hero d-flex flex-column justify-content-center" style="background-image:url(../dist/images/van-truck.jpg); background-position:center center;">
+  <?php 
+    $page_id = get_the_ID();
+    $hero_img = get_stylesheet_directory_uri() . '/images/wrench-pipe-fitting.jpg';
+    $hero_img_css = 'background-position:center center;';
+    
+    $hero_img_id = get_post_meta($page_id, 'hero_background_image', true);
+    if($hero_img_id){
+      $hero_img = wp_get_attachment_image_src($hero_img_id, 'full');
+      $hero_img_css = get_post_meta($page_id, 'hero_background_image_css', true);
+    }
+  ?>
+  <section id="hero" class="<?php if(is_front_page()){ echo 'hp-hero '; } ?>d-flex flex-column justify-content-center" style="background-image:url(<?php echo esc_url($hero_img); ?>); <?php echo esc_attr($hero_img_css); ?>">
     <div class="container">
       <div class="hero-caption d-flex flex-wrap text-center justify-content-center align-items-center">
-        <h1>Reliable Plumbing Repair in Fredericksburg and King George, VA</h1>
-        <p>Professional Plumbing Solutions Inc. is a Virginia-based company that offers over 30 years of experience to resolve your drain cleaning and plumbing problems.</p>
-        <div class="mt-5">
-          <a href="#" class="btn-main">Contact Us</a>
-          <a href="#" class="btn-main">Services</a>
-        </div>
+        <?php
+          if(is_single('service')){
+            $service_icon_id = get_post_meta($page_id, 'service_icon', true);
+            $service_img = wp_get_attachment_image_src($service_icon_id, 'full')
+            $service_img_alt = get_post_meta($service_icon_id, '_wp_attachment_image_alt', true);
+
+            echo '<img src="' . esc_url($service_img) . '" class="img-fluid d-block mx-auto" alt="' . esc_attr($service_img_alt) . '" />';
+          }
+          echo apply_filters('the_content', wp_kses_post(get_post_meta($page_id, 'hero_content', true)));
+        ?>
       </div>
     </div>
     <div class="dark-overlay"></div>
-    <a href="#" class="btn-hero-chat">
-      <!--<img src="../dist/images/chat-icon.png" alt="Contact Us" />-->
-      <i class="fas fa-comment fa-2x fa-border"></i>
-    </a>
+    <?php if(get_option('options_show_chat_button') == true): ?>
+      <a href="<?php echo esc_url(get_option('options_chat_button_link')); ?>" class="btn-hero-chat">
+        <i class="fas fa-comment fa-2x fa-border"></i>
+      </a>
+        <?php endif; ?>
     <div class="hero-bottom-arch"></div>
   </section>
