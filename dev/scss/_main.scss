@@ -92,6 +92,31 @@ input.btn-main{
   }
 }
 
+img.alignnone{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:20px;
+}
+img.aligncenter{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:20px auto;
+}
+img.alignright{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:20px 0px 20px 20px;
+}
+img.alignleft{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:20px 20px 20px 0px;
+}
+
 .dark-overlay{
   position:absolute;
   height:100%;

@@ -5,7 +5,7 @@
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eagle-2.png" class="eagle img-fluid" alt="" />
     <div class="get-started-container">
       <?php if(is_page('contact-us')): ?>
-        <?php echo do_shortcode('[contact_form]'); ?>
+        <?php echo do_shortcode('[contact-form-7 id="19" title="Contact form 1"]'); ?>
       <?php else: ?>
         <?php echo apply_filters('the_content', wp_kses_post(get_option('options_get_started_section_content'))); ?>
       <?php endif; ?>

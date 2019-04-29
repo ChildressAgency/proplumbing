@@ -76,20 +76,21 @@
   ?>
   <section id="hero" class="<?php if(is_front_page()){ echo 'hp-hero '; } ?>d-flex flex-column justify-content-center" style="background-image:url(<?php echo esc_url($hero_img); ?>); <?php echo esc_attr($hero_img_css); ?>">
     <div class="container">
-      <div class="hero-caption d-flex flex-wrap text-center justify-content-center align-items-center">
+      <div class="hero-caption d-flex flex-column flex-wrap text-center justify-content-center align-items-center">
         <?php
-          if(is_single('service')){
+          if(is_singular('service')){
             $service_icon_type = get_post_meta($page_id, 'service_icon_file_type', true);
             if($service_icon_type == 'SVG'){
               $service_img = proplumbing_esc_svg(get_post_meta($page_id, 'service_icon', true));
+              echo $service_img;
             }
             else{
               $service_icon_id = get_post_meta($page_id, 'service_icon', true);
               $service_img_array = wp_get_attachment_image_src($service_icon_id, 'full');
               $service_img = $service_img_array[0];
+              echo '<img src="' . esc_url($service_img) . '" class="service-icon img-fluid d-block mx-auto" alt="" />';
             }
 
-            echo '<img src="' . esc_url($service_img) . '" class="service-icon img-fluid d-block mx-auto" alt="" />';
           }
           echo apply_filters('the_content', wp_kses_post(get_post_meta($page_id, 'hero_content', true)));
         ?>
