@@ -78,11 +78,17 @@
       <div class="hero-caption d-flex flex-wrap text-center justify-content-center align-items-center">
         <?php
           if(is_single('service')){
-            $service_icon_id = get_post_meta($page_id, 'service_icon', true);
-            $service_img = wp_get_attachment_image_src($service_icon_id, 'full')
-            $service_img_alt = get_post_meta($service_icon_id, '_wp_attachment_image_alt', true);
+            $service_icon_type = get_post_meta($page_id, 'service_icon_file_type', true);
+            if($service_icon_type == 'SVG'){
+              $service_img = proplumbing_esc_svg(get_post_meta($page_id, 'service_icon', true));
+            }
+            else{
+              $service_icon_id = get_post_meta($page_id, 'service_icon', true);
+              $service_img_array = wp_get_attachment_image_src($service_icon_id, 'full');
+              $service_img = $service_img_array[0];
+            }
 
-            echo '<img src="' . esc_url($service_img) . '" class="img-fluid d-block mx-auto" alt="' . esc_attr($service_img_alt) . '" />';
+            echo '<img src="' . esc_url($service_img) . '" class="img-fluid d-block mx-auto" alt="" />';
           }
           echo apply_filters('the_content', wp_kses_post(get_post_meta($page_id, 'hero_content', true)));
         ?>
