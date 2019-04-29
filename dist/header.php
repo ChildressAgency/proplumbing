@@ -89,7 +89,7 @@
               $service_img = $service_img_array[0];
             }
 
-            echo '<img src="' . esc_url($service_img) . '" class="img-fluid d-block mx-auto" alt="" />';
+            echo '<img src="' . esc_url($service_img) . '" class="service-icon img-fluid d-block mx-auto" alt="" />';
           }
           echo apply_filters('the_content', wp_kses_post(get_post_meta($page_id, 'hero_content', true)));
         ?>
