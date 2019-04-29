@@ -44,8 +44,8 @@
 
               for($t = 0; $t < $testimonials; $t++): ?>
                 <div class="carousel-item<?php if($t == 0){ echo ' active'; } ?>">
-                  <?php echo esc_html(get_post_meta($page_id, 'testimonials_' . $t . '_testimonial')); ?>
-                  <cite><?php echo esc_html(get_post_meta($page_id, 'testimonials_' . $t . '_testimonial_author')); ?></cite>
+                  <?php echo apply_filters('the_content', wp_kses_post(get_post_meta($page_id, 'testimonials_' . $t . '_testimonial', true))); ?>
+                  <cite><?php echo wp_kses_post(get_post_meta($page_id, 'testimonials_' . $t . '_testimonial_author', true)); ?></cite>
                 </div>
             <?php endfor; ?>
           </div>
@@ -63,7 +63,7 @@
       </div>
       <div class="col-md-6 financing d-flex justify-content-center flex-column align-items-center">
         <div class="financing-content">
-          <?php echo apply_filters(wp_kses_post(get_post_meta($page_id, 'financing_section_content', true))); ?>
+          <?php echo apply_filters('the_content', wp_kses_post(get_post_meta($page_id, 'financing_section_content', true))); ?>
 
           <?php $financing_link = get_post_meta($page_id, 'financing_section_link', true); ?>
           <a href="<?php echo esc_url($financing_link['url']); ?>" class="btn-rounded btn-gradient"><?php echo esc_html($financing_link['title']); ?></a>

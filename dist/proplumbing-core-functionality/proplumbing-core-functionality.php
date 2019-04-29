@@ -33,7 +33,7 @@ function proplumbing_acf_settings_dir($dir){
 
 add_action('plugins_loaded', 'proplumbing_load_textdomain');
 function proplumbing_load_textdomain(){
-  load_plugin_textdomain('proplumbing', false, basename(FEDCON_PLUGIN_DIR) . '/languages');
+  load_plugin_textdomain('proplumbing', false, basename(PROPLUMBING_PLUGIN_DIR) . '/languages');
 }
 
 require_once PROPLUMBING_PLUGIN_DIR . '/includes/proplumbing-create-post-types.php';
@@ -50,3 +50,10 @@ function proplumbing_options_page(){
   ));
 }
 
+require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-hero.php';
+require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-home.php';
+require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-get-started-section.php';
+require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-our-team.php';
+require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-service-icon.php';
+require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-contact-info.php';
+require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-contact-info.php';

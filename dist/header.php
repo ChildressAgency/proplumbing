@@ -69,7 +69,8 @@
     
     $hero_img_id = get_post_meta($page_id, 'hero_background_image', true);
     if($hero_img_id){
-      $hero_img = wp_get_attachment_image_src($hero_img_id, 'full');
+      $hero_img_array = wp_get_attachment_image_src($hero_img_id, 'full');
+      $hero_img = $hero_img_array[0];
       $hero_img_css = get_post_meta($page_id, 'hero_background_image_css', true);
     }
   ?>
