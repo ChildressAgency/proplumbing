@@ -269,3 +269,45 @@ function proplumbing_custom_styles(){
   </style>';
 }
 //end custom font settings
+
+function fedcon_esc_svg($svg){
+  $kses_defaults = wp_kses_allowed_html('post');
+
+  $svg_args = array(
+    'svg' => array(
+      'class' => true,
+      'id' => true,
+      'xmlns' => true,
+      'viewbox' => true,
+      'width' => true,
+      'height' => true
+    ),
+    'defs' => array(),
+    'title' => array(),
+    'g' => array(
+      'id' => true
+    ),
+    'path' => array(
+      'class' => true,
+      'd' => true,
+      'fill' => true
+    ),
+    'rect' => array(
+      'class' => true,
+      'x' => true,
+      'y' => true,
+      'width' => true,
+      'height' => true,
+      'transform' => true,
+      'fill' => true
+    ),
+    'polygon' => array(
+      'class' => true,
+      'points' => true,
+      'fill' => true
+    )
+  );
+
+  $allowed_tags = array_merge($kses_defaults, $svg_args);
+  echo wp_kses($svg, $allowed_tags);
+}
