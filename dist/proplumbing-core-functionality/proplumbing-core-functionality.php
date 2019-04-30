@@ -57,3 +57,4 @@ require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-o
 require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-service-icon.php';
 require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-contact-info.php';
 require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-footer-disclaimer.php';
+require_once PROPLUMBING_PLUGIN_DIR . '/includes/custom-fields/proplumbing-acf-service-gallery.php';

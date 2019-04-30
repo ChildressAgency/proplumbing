@@ -14,7 +14,7 @@
   if($service_gallery): ?>
     <section id="gallery">
       <div class="container-fluid">
-        <?php echo do_shortcode(); ?>
+        <?php echo do_shortcode($service_gallery); ?>
       </div>
     </section>
   <?php endif; ?>
