@@ -18,15 +18,16 @@
   <section id="leaky-pipe">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-7 col-lg-5">
           <article class="text-center">
             <?php echo apply_filters('the_content', wp_kses_post(get_post_meta($page_id, 'second_section_content', true))); ?>
           </article>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-5 col-lg-7">
           <div class="pipe-valve d-none d-md-block">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/vertical-pipe-with-housing.png" class="pipe" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/broken-pipe.png" class="pipe" alt="" />
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/valve-handle.png" class="valve" alt="" />
+            <canvas id="spray"></canvas>
           </div>
         </div>
       </div>

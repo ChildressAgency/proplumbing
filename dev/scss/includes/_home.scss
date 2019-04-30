@@ -58,7 +58,7 @@
 }
 
 #leaky-pipe{
-  background-image:url(images/textured-bg.jpg);
+  background-image:url(images/leaky-pipe-bg.jpg);
   background-repeat:no-repeat;
   background-position:center center;
   background-size:cover;
@@ -69,13 +69,13 @@
   }
 
   article{
-    margin-top: 175px;
+    margin-top: 60px;
     max-width:485px;
     margin-left:auto;
     margin-right:auto;
     color: $nero;
     position:relative;
-    z-index:1;
+    z-index:3;
 
     h2{
       margin-bottom:25px;
@@ -84,6 +84,10 @@
     ul{
       list-style:none;
       padding-left:0;
+    }
+
+    p:first-of-type + p{
+      margin-top:240px;
     }
 
     @include media-breakpoint-down(sm){
@@ -100,24 +104,39 @@
 
   .pipe{
     display:block;
-    margin-left:auto;
+    margin-left:90px;
     margin-right:auto;
+    position:relative;
+    z-index:3;
   }
   .valve{
     position:absolute;
     bottom:205px;
-    left:50%;
-    transform:translateX(-50%);
+    left:152px;
+    z-index:5;
     animation: spin 4000ms linear 0s infinite;
+  }
+  .water-spray{
+    position:absolute;
+    left:-888px;
+    bottom:817px;
+    width:1323px;
+    z-index:1;
+  }
+  #spray{
+    position:absolute;
+    left:-703px;
+    bottom:895px;
+    z-index:2;
   }
 }
 
 @keyframes spin{
   0%{
-    transform: translateX(-50%) rotate(0);
+    transform: rotate(0);
   }
   100%{
-    transform: translateX(-50%) rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 
