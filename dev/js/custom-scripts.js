@@ -1,3 +1,6 @@
+/*!
+ * theme custom scripts
+*/
 jQuery(document).ready(function($){
   // animation check
   var $animationElements = $('.animation-trigger');

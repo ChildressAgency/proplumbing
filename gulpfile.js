@@ -22,10 +22,14 @@ gulp.task('js', function(){
     .pipe(sourcemaps.init())
     .pipe(order([
       'vendor/**/*.js',
-      '*.js'
+      '9_custom-scripts.js'
     ]))
     .pipe(concat('custom-scripts.min.js'))
-    .pipe(uglify())
+    .pipe(uglify({
+      output: {
+        comments: '/^!/'
+      }
+    }))
     .pipe(sourcemaps.write('../../dev/maps',{includeContent:false, sourceRoot: 'dist'}))
     .pipe(gulp.dest('dist/js'))
 });
