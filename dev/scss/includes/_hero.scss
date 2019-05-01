@@ -7,7 +7,7 @@
   background-repeat:no-repeat;
   background-size:cover;
   position:relative;
-  margin-top:-108px;
+  margin-top:-8%;
 
   &.hp-hero{
     height:790px;
@@ -73,7 +73,7 @@
     background-color: $nero;
   }
 }
-
+/*
 .hero-bottom-arch{
   position:absolute;
   bottom:0;
@@ -83,6 +83,13 @@
   background-size:contain;
   background-position: bottom center;
   height:118px;
+  width:100%;
+  z-index:3;
+}*/
+.hero-bottom-arch>img{
+  position:absolute;
+  bottom:0;
+  left:0;
   width:100%;
   z-index:3;
 }

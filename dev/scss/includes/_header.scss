@@ -127,7 +127,7 @@
     color: $turbo;
   }
 }
-
+/*
 .header-arch{
   display:block;
   height:109px;
@@ -136,4 +136,9 @@
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center top;
+}*/
+.header-arch>img{
+  display:inline-block;
+  vertical-align: top;
+  width:100%;
 }

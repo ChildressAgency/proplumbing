@@ -59,7 +59,9 @@
         wp_nav_menu($header_nav_args);
       ?>
     </nav>
-    <div class="header-arch"></div>
+    <div class="header-arch">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/header-arch.png" alt="" />
+    </div>
   </header>
 
   <?php 
@@ -102,5 +104,7 @@
         <i class="fas fa-comment fa-2x fa-border"></i>
       </a>
         <?php endif; ?>
-    <div class="hero-bottom-arch"></div>
+    <div class="hero-bottom-arch">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hero-bottom-arch.png" alt="" />
+    </div>
   </section>

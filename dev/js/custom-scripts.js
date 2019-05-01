@@ -58,7 +58,7 @@ jQuery(document).ready(function($){
 
   //canvas.width = window.innerWidth;
   //canvas.height = window.innerHeight;
-  canvas.width = 1200;
+  canvas.width = 1900;
   canvas.height = 500;
 
   function Particle(point, velocity, acceleration) {

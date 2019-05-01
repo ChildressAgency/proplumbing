@@ -125,7 +125,7 @@
   }
   #spray{
     position:absolute;
-    left:-703px;
+    left:-1050px;
     bottom:895px;
     z-index:2;
   }
@@ -148,11 +148,15 @@
   .testimonials{
     background-color: $nero;
     padding-top:40px;
-    padding-bottom:100px;
+    padding-bottom:200px;
     padding-left:15px;
     padding-right:15px;
     text-align:center;
     color:#fff;
+
+    @include media-breakpoint-down(sm){
+      padding-bottom:80px;
+    }
   }
 
   .financing{
@@ -169,7 +173,7 @@
     z-index:3;
     text-align:center;
     padding-top:40px;
-    padding-bottom:100px;
+    padding-bottom:200px;
     padding-left:15px;
     padding-right:15px;
 
@@ -182,9 +186,6 @@
       margin-top:25px;
     }
 
-    @include media-breakpoint-only(sm){
-      padding-bottom:200px;
-    }
     @include media-breakpoint-only(xs){
       padding-bottom:240px;
     }
