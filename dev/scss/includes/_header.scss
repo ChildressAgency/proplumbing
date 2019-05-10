@@ -80,6 +80,29 @@
 #header-nav{
   padding-top:85px;
   background-color: $nero;
+
+  .nav-phone{
+    text-align: center;
+    margin-top:15px;
+    margin-bottom:15px;
+
+    p{
+      color: #fff;
+      font-size:16px;
+      margin-bottom:0;
+    }
+    a{
+      color: #fff;
+      font-size:44px;
+      line-height:1em;
+
+      &:hover,
+      &:focus{
+        color: #fff;
+        text-decoration:none;
+      }
+    }
+  }
 }
 
 .navbar-nav{

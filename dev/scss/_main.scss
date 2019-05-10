@@ -30,9 +30,19 @@ a{
     background-image:repeating-linear-gradient(90deg, #dcd7d4, #8c888e 25%, #dcd7d4 50%);
   }
 
+  &>a{
+    color:#fff;
+  }
+
   &:hover,
   &:focus{
     background-color: $nero;
+    color:#fff;
+    text-decoration:none;
+  }
+
+  &:hover>a,
+  &:focus>a{
     color:#fff;
     text-decoration:none;
   }

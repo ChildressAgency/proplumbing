@@ -38,10 +38,14 @@
       <a href="<?php echo esc_url(home_url('home')); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" class="d-block mx-auto" alt="Professional Plumbing Services Inc Logo" /></a>
     </div>
     <nav id="header-nav" class="navbar navbar-expand-md">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-navbar" aria-controls="header-navbar" aria-expanded="false" aria-label="Toggle Navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle Navigation">
         <i class="fas fa-bars"></i>
       </button>
       <?php 
+        $nav_phone = '<div class="nav-phone d-block d-md-none">
+                        <p>Call Us Today to Resolve Your Plumbing Problem Quickly</p>
+                        <a href="tel:' . $phone . '">' . $phone . '</a>
+                      </div>';
         $header_nav_args = array(
           'theme_location' => 'header-nav',
           'menu' => '',
@@ -52,7 +56,7 @@
           'menu_class' => 'navbar-nav',
           'echo' => true,
           'fallback_cb' => 'proplumbing_header_fallback_menu',
-          'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+          'items_wrap' => $nav_phone . '<ul id="%1$s" class="%2$s">%3$s</ul>',
           'depth' => 2,
           'walker' => new WP_Bootstrap_Navwalker()
         );
