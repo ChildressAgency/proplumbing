@@ -228,16 +228,20 @@ function proplumbing_styles_dropdown($settings){
 add_action('admin_head', 'proplumbing_custom_styles');
 function proplumbing_custom_styles(){
   echo '<style>
-    .btn-main{
+    .btn-contact>a{
       display:inline-block;
       font-family: "Oswald", sans-serif;
       font-weight: 500;
       color: #242424;
-      background-color: #F6C626;
+      background-color: #f6c626;
       padding:5px 30px;
+      /*border: 2px solid #dcd7d4;*/
       position:relative;
+      margin-bottom:40px;
+      margin-top:40px;
     }
-    .btn-main::before{
+
+    .btn-contact>a::before{
       content:"";
       position:absolute;
       top:-6%;
@@ -248,23 +252,11 @@ function proplumbing_custom_styles(){
       background-color:#fff;
       background-image:repeating-linear-gradient(90deg, #dcd7d4, #8c888e 25%, #dcd7d4 50%);
     }
-    .btn-main:hover,
-    .btn-main:focus{
-      background-color:#242424;
+    .btn-contact>a:hover,
+    .btn-contact>a:focus{
+      background-color: #242424;
       color:#fff;
       text-decoration:none;
-    }
-    .btn-main.btn-alt{
-      background-color:#242424;
-      color:#fff;
-    }
-    .btn-main.btn-alt:hover,
-    .btn-main.btn-alt:focus{
-      background-color:#F6C626;
-      color:#242424;
-    }
-    .btn-main + .btn-main{
-      margin-left:25px;
     }
   </style>';
 }

@@ -58,6 +58,37 @@ a{
   }
 }
 
+.btn-contact>a{
+  display:inline-block;
+  font-family: $font-alt;
+  font-weight: $font-weight-medium;
+  color: $nero;
+  background-color: $turbo;
+  padding:5px 30px;
+  /*border: 2px solid #dcd7d4;*/
+  position:relative;
+  margin-bottom:40px;
+  margin-top:40px;
+
+  &::before{
+    content:"";
+    position:absolute;
+    top:-6%;
+    left:-3%;
+    height:114%;
+    width:106%;
+    z-index:-1;
+    background-color:#fff;
+    background-image:repeating-linear-gradient(90deg, #dcd7d4, #8c888e 25%, #dcd7d4 50%);
+  }
+  &:hover,
+  &:focus{
+    background-color: $nero;
+    color:#fff;
+    text-decoration:none;
+  }
+}
+
 .btn-main + .btn-main{
   margin-left:25px;
 
