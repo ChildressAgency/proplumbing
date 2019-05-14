@@ -115,6 +115,22 @@ acf_add_local_field_group(array(
       'default_value' => '',
       'placeholder' => '',
     ),
+    array(
+      'key' => 'field_saght3r6ri',
+      'label' => 'Instagram',
+      'name' => 'instagram',
+      'type' => 'url',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array(
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+    ),
   ),
   'location' => array(
     array(

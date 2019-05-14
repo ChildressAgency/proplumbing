@@ -38,6 +38,9 @@
         <?php if(get_option('options_facebook')): ?>
           <a href="<?php echo esc_url(get_option('options_facebook')); ?>" id="facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
         <?php endif; ?>
+        <?php if(get_option('options_instagram')): ?>
+          <a href="<?php echo esc_url(get_option('options_instagram')); ?>" id="instagram" class="ml-3" target="_blank"><i class="fab fa-instagram"></i></a>
+        <?php endif; ?>
       </div>
 
       <div class="colophon">
